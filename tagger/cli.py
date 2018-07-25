@@ -53,7 +53,7 @@ def export_ec2_untagged(region_name, tag_key):
     click.echo("... ec2: fetched ... {0}".format(count))
     filename = "ec2_untagged.csv"
     if count > 0:
-        export.array_dict(filename, instances)
+        export.ec2(filename, instances)
         click.echo("... ec2: exported to {}".format(filename))
 
 
